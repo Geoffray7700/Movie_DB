@@ -16,7 +16,18 @@ $name=$_POST['name'];
 
 /*print_r($_POST); */
 
-$db ->query('insert into category (name) value  ("'.$name.'")');
+
+$result=$db ->query('insert into category (name) value  ("'.$name.'")');
+// query ne pas utiliser => faille sécurité
+
+//echo '<pre>';
+//affiche l'erreur
+//print_r($db->errorInfo());
+
+
+
+
+
 
 
 
